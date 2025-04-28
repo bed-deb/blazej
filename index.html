@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Błażej</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://i.imgur.com/7dHVsJV.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: pink;
+            text-align: center;
+        }
+        .center-text {
+            margin-top: 20vh;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .toggle-button {
+            margin-top: 50px;
+            padding: 10px 20px;
+            background-color: pink;
+            border: none;
+            color: black;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+            background-color: rgba(255, 192, 203, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .insta-icon {
+            width: 50px;
+            margin-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+    <script>
+        function toggleVisibility(id) {
+            const el = document.getElementById(id);
+            if (el.style.display === "none" || el.style.display === "") {
+                el.style.display = "block";
+            } else {
+                el.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="center-text">
+        cześć, jestem zwykłą dziwką. Nazywam się Błażej.
+    </div>
+
+    <button class="toggle-button" onclick="toggleVisibility('kontakt')">Kontakt</button>
+    <div id="kontakt" class="hidden-content">
+        <a href="https://www.instagram.com/blazeito_?igsh=anN6a3c3MmNibHU1" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="insta-icon">
+        </a>
+    </div>
+
+    <button class="toggle-button" onclick="toggleVisibility('cennik')">Cennik</button>
+    <div id="cennik" class="hidden-content">
+        <p><strong>Cennik Błażeja:</strong></p>
+        <ul style="list-style-type: none; padding: 0;">
+            <li>Lodzik bez gumki - 50 zł</li>
+            <li>Lodzik + gumka - 50 zł + koszt gumki</li>
+            <li>Anal - 150 zł</li>
+            <li>Złoty deszczyk - 80 zł</li>
+        </ul>
+    </div>
+
+</body>
+</html>
